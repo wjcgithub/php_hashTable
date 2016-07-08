@@ -12,7 +12,7 @@
     class HashTable
     {
         //hashtable size
-        private $size = 10;
+        private $size = 100;
         private $buckets;
 
         /**
@@ -39,7 +39,6 @@
 //            }
 
             $sum = crc32($key);
-echo $sum."\r\n";
             return $sum % $this->size;
         }
 
