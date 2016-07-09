@@ -82,12 +82,12 @@ window.onload = function (){
         ctx.moveTo(x,y)
         var linex = Math.cos(oneKeyDegree*index*Math.PI/180)*r+x
         var liney = Math.sin(oneKeyDegree*index*Math.PI/180)*r+y
-        ctx.lineTo(linex,liney)
+        //ctx.lineTo(linex,liney)
         ctx.arc(linex,liney,radius,utils.hd(0),utils.hd(360))
         ctx.fillStyle = cycleColor
-        ctx.strokeStyle = cycleColor
+        //ctx.strokeStyle = cycleColor
         ctx.fill()
-        ctx.stroke()
+        //ctx.stroke()
         ctx.save()
     }
 
