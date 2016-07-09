@@ -10,3 +10,7 @@
 2. clone 到本地
 3. 将consistency_hash放到web环境下面,一定要可以使用IP|域名能访问到, 因为需要请求php端的hash算法
 4. 在浏览器中访问index.html页面可看到效果
+
+# 接下来要做的
+1. 添加localstorage
+2. 添加条形hash桶的显示

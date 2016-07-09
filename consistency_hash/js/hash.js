@@ -96,22 +96,61 @@ window.onload = function (){
     addLogo()
     //加载缓存 todo
 
-    DrawCycle(keyNum*1/6,1)
-    DrawCycle(keyNum*2/6,1)
-    DrawCycle(keyNum*3/6,1)
-    DrawCycle(keyNum*4/6,1)
-    DrawCycle(keyNum*5/6,1)
-    DrawCycle(keyNum*6/6,1)
-    DrawCycle(keyNum*1/60,2)
-    DrawCycle(keyNum*4/60,2)
-    DrawCycle(keyNum*7/60,2)
-    DrawCycle(keyNum*3/60,2)
-    DrawCycle(keyNum*63/200,2)
-    DrawCycle(keyNum*53/160,2)
-    DrawCycle(keyNum*34/60,2)
-    DrawCycle(keyNum*45/60,2)
-    DrawCycle(keyNum*242/260,2)
-    DrawCycle(keyNum*345/460,2)
+    setTimeout(function (){
+        DrawCycle(keyNum*1/6,1)
+    },1000)
+    setTimeout(function (){
+        DrawCycle(keyNum*2/6,1)
+    },2000)
+    setTimeout(function (){
+        DrawCycle(keyNum*3/6,1)
+    },3000)
+    setTimeout(function (){
+        DrawCycle(keyNum*4/6,1)
+    },4000)
+    setTimeout(function (){
+        DrawCycle(keyNum*5/6,1)
+    },5000)
+    setTimeout(function (){
+        DrawCycle(keyNum*6/6,1)
+    },6000)
+    setTimeout(function (){
+        DrawCycle(keyNum*1/60,2)
+    },6500)
+    setTimeout(function (){
+        DrawCycle(keyNum*4/60,2)
+        DrawCycle(keyNum*31/350,2)
+    },7000)
+    setTimeout(function (){
+        DrawCycle(keyNum*7/60,2)
+        DrawCycle(keyNum*70/760,2)
+    },7500)
+    setTimeout(function (){
+        DrawCycle(keyNum*3/60,2)
+        DrawCycle(keyNum*321/560,2)
+    },8000)
+    setTimeout(function (){
+        DrawCycle(keyNum*63/200,2)
+        DrawCycle(keyNum*163/400,2)
+    },8500)
+    setTimeout(function (){
+        DrawCycle(keyNum*53/160,2)
+    },9000)
+    setTimeout(function (){
+        DrawCycle(keyNum*34/60,2)
+        DrawCycle(keyNum*131/350,2)
+    },9500)
+    setTimeout(function (){
+        DrawCycle(keyNum*45/60,2)
+        DrawCycle(keyNum*245/960,2)
+    },10000)
+    setTimeout(function (){
+        DrawCycle(keyNum*242/260,2)
+    },10500)
+    setTimeout(function (){
+        DrawCycle(keyNum*345/460,2)
+    },11000)
+
 
     function addServer(){
         var val = document.getElementById('serverval').value
