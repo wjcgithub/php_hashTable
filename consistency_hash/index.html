@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
     <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
     <script src="js/canvas.js"></script>
@@ -25,6 +40,8 @@
 </head>
 <body>
 <input type="text" id="serverval"><input type="button" id="addserver" value="addserver">
+<br>
+<br>
 <input type="text" id="keyval"><input type="button" id="addkey" value="addkey">
 <div id="div1"></div>
 </body>

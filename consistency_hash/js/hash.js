@@ -2,8 +2,8 @@ window.onload = function (){
     //创建canvas对象
     var canvasObj = new Canvas('div1')
     var utils = new Utils()
-    canvasObj.width = 1000
-    canvasObj.height = 890
+    canvasObj.width = 600
+    canvasObj.height = 600
     //生成canvas标签
     canvasObj.c()
     var ctx = canvasObj.getInstance()
@@ -46,7 +46,7 @@ window.onload = function (){
     //添加文字
     function addText(){
         ctx.save()
-        ctx.font = '60px impact'
+        ctx.font = '35px impact'
         ctx.textBaseLine = 'top'
         ctx.fillStyle = 'rgba(57,9,9,0.7)'
         ctx.shadowOffsetX = 10
