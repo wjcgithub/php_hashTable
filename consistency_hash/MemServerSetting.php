@@ -77,9 +77,19 @@
          *
          * @return int
          */
-        private function hashFunc($key){
-            $sum = crc32($key);
-            return $sum % $this->size;
+        public function hashFunc($key){
+            //获取8个字符
+            $md5 = substr(md5($key),0,8);
+            $seed = 31;
+            $hash = 0;
+
+            //计算一个hash值
+            for($i = 0; $i<8;$i++){
+                $hash = $hash*$seed + ord($md5{$i});
+            }
+
+            //位运算, max 0x7fffffff
+            return $hash & 0xFFFFFFFF;
         }
 
     }
