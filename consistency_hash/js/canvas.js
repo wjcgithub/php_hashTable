@@ -1,8 +1,4 @@
-/**
- * Created by evolution on 15-9-20.
-  */
-
-  function Canvas(elem){
+ function Canvas(elem){
       if(elem=='' || !elem){
           alert('请输入参数');
           return;
@@ -45,8 +41,6 @@
                   //_this.ctx.drawImage(img,10,10,100,100,150,150,1000,1000);
               
       }
-
-
           //参数值
           //参数值           描述
           //img                规定要使用的图像、画布或视频。

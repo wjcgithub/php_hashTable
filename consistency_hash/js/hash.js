@@ -1,6 +1,3 @@
-/**
- * Created by evolution on 15-9-19.
- */
 window.onload = function (){
     //创建canvas对象
     var canvasObj = new Canvas('div1')
@@ -14,18 +11,35 @@ window.onload = function (){
     var keyNum = Math.pow(2,32)-1
     //每个点阵的度数
     var oneKeyDegree = 360/keyNum
+    var red = 'rgba(255,0,0,0.7)'
+    var green = 'rgba(0,255,0,0.7)'
+    var black = 'rgba(5,5,5,0.7)'
 
     //clear canvas
     ctx.clearRect(0,0,canvasObj.width,canvasObj.height)
-
     //画外层大圆
     var x = canvasObj.width/2
     var y = canvasObj.height/2
     var r = canvasObj.width/2.3
     ctx.beginPath()
     ctx.arc(x,y,r,utils.hd(0),utils.hd(360))
-    ctx.closePath()
     ctx.stroke()
+
+    function addLogo(){
+        ctx.beginPath()
+        ctx.fillStyle=red
+        ctx.arc(30,30,20,utils.hd(0),utils.hd(360))
+        ctx.fill()
+        ctx.fillStyle=black
+        ctx.fillText('服务器',30,30)
+
+        ctx.beginPath()
+        ctx.fillStyle=green
+        ctx.arc(30,70,10,utils.hd(0),utils.hd(360))
+        ctx.fill()
+        ctx.fillStyle=black
+        ctx.fillText('key',30,70)
+    }
 
     //添加文字
     function addText(){
@@ -55,10 +69,10 @@ window.onload = function (){
 
         if(type==1){
             var radius = 8
-            var cycleColor = 'rgba(255,0,0,0.7)'
+            var cycleColor = red
         }else if(type==2){
             var radius = 4
-            var cycleColor = 'rgba(0,255,0,0.7)'
+            var cycleColor = green
         }
 
         ctx.beginPath()
@@ -75,12 +89,8 @@ window.onload = function (){
 
     //添加文字
     addText()
-    //加载缓存
-
-    localStorage.setItem("key","value")
-    //alert(localStorage.getItem("key"))
-    //localStorage.removeItem("key")
-    //localStorage.clear()
+    addLogo()
+    //加载缓存 todo
 
     function addServer(){
         var val = document.getElementById('serverval').value
@@ -101,7 +111,6 @@ window.onload = function (){
 
     document.getElementById('addserver').onclick = addServer
     document.getElementById('addkey').onclick = addKey
-
 }
 
 
