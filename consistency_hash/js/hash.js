@@ -24,6 +24,7 @@ window.onload = function (){
     ctx.beginPath()
     ctx.arc(x,y,r,utils.hd(0),utils.hd(360))
     ctx.stroke()
+    ctx.save()
 
     function addLogo(){
         ctx.beginPath()
@@ -39,6 +40,7 @@ window.onload = function (){
         ctx.fill()
         ctx.fillStyle=black
         ctx.fillText('key',30,70)
+        ctx.save()
     }
 
     //添加文字
@@ -54,6 +56,7 @@ window.onload = function (){
         var w = ctx.measureText('一致性Hash算法演示').width
         ctx.fillText('一致性Hash算法演示',(x*2-w)/2, y+25)
         ctx.restore()
+        ctx.save()
     }
 
     /**
@@ -85,12 +88,30 @@ window.onload = function (){
         ctx.strokeStyle = cycleColor
         ctx.fill()
         ctx.stroke()
+        ctx.save()
     }
 
     //添加文字
     addText()
     addLogo()
     //加载缓存 todo
+
+    DrawCycle(keyNum*1/6,1)
+    DrawCycle(keyNum*2/6,1)
+    DrawCycle(keyNum*3/6,1)
+    DrawCycle(keyNum*4/6,1)
+    DrawCycle(keyNum*5/6,1)
+    DrawCycle(keyNum*6/6,1)
+    DrawCycle(keyNum*1/60,2)
+    DrawCycle(keyNum*4/60,2)
+    DrawCycle(keyNum*7/60,2)
+    DrawCycle(keyNum*3/60,2)
+    DrawCycle(keyNum*63/200,2)
+    DrawCycle(keyNum*53/160,2)
+    DrawCycle(keyNum*34/60,2)
+    DrawCycle(keyNum*45/60,2)
+    DrawCycle(keyNum*242/260,2)
+    DrawCycle(keyNum*345/460,2)
 
     function addServer(){
         var val = document.getElementById('serverval').value
