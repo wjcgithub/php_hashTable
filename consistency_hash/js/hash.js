@@ -74,7 +74,7 @@ window.onload = function (){
             var radius = 8
             var cycleColor = red
         }else if(type==2){
-            var radius = 4
+            var radius = 3
             var cycleColor = green
         }
 
@@ -82,12 +82,18 @@ window.onload = function (){
         ctx.moveTo(x,y)
         var linex = Math.cos(oneKeyDegree*index*Math.PI/180)*r+x
         var liney = Math.sin(oneKeyDegree*index*Math.PI/180)*r+y
-        //ctx.lineTo(linex,liney)
+        if(type==2){
+            ctx.lineTo(linex,liney)
+        }
         ctx.arc(linex,liney,radius,utils.hd(0),utils.hd(360))
         ctx.fillStyle = cycleColor
-        //ctx.strokeStyle = cycleColor
+        if(type==2) {
+            ctx.strokeStyle = cycleColor
+        }
         ctx.fill()
-        //ctx.stroke()
+        if(type==2) {
+            ctx.stroke()
+        }
         ctx.save()
     }
 
