@@ -1,3 +1,4 @@
+![一致性hash演示](hash_c.png)
 # php_hashTable
 1. php hashTable的实现,  
 2. hash码冲突的解决方法,  
