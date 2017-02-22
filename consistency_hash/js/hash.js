@@ -169,7 +169,7 @@ window.onload = function (){
     }
 
     function getIndex(val,type){
-        $.get("http://local.demo.com/php_file/hash/consistency_hash/hash.php?key=21", { "key": val },
+        $.get("http://localhost:8090/hash.php?key=21", { "key": val },
             function(req) {
                 DrawCycle(req,type)
             })
