@@ -169,7 +169,7 @@ window.onload = function (){
     }
 
     function getIndex(val,type){
-        $.get("http://localhost:8090/hash.php?key=21", { "key": val },
+        $.get("http://ht.wangjichao.cc/hash.php?key=21", { "key": val },
             function(req) {
                 DrawCycle(req,type)
             })
