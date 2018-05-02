@@ -2,7 +2,7 @@
 
 
 
-演示地址：　http://ht.wangjichao.cc:8090/
+演示地址：　http://ht.hotfive.cn/
 
 # php_hashTable
 1. php hashTable的实现,  
